@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DieSpeckMäuse - Naturkindergarten</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: rgb(218, 187, 140);
+            font-family: 'Quicksand', sans-serif;
+            color: #563d30;
+            padding-top: 56px;
+            /* Adjust this value based on your navbar height */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #563d30;
+            margin-bottom: 0;
+        }
+
+        .navbar-brand {
+            color: #dabb8c !important;
+            font-family: 'Gloria Hallelujah', cursive;
+        }
+
+        .nav-link {
+            color: #dabb8c !important;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .navbar-toggler {
+            border-color: rgba(243, 225, 213, 0.5);
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, .25);
+        }
+
+        /* Fullscreen Jumbotron styles */
+        
+        .fullscreen-jumbotron {
+    height: calc(100vh - 56px); /* Subtract navbar height */
+    margin-bottom: 0;
+    background: url('your-background-image.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
+.fullscreen-jumbotron .container {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%; /* Increase the width of the container */
+    max-width: 1200px; /* Set a max-width for very large screens */
+}
+
+.fullscreen-jumbotron h1 {
+    font-family: 'Gloria Hallelujah';
+    color: rgb(134, 80, 49);
+    font-size: calc(3rem + 5vw); /* Increase font size */
+    word-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.2;
+    margin-bottom: 1rem; /* Increase space between h1 and p */
+}
+
+.fullscreen-jumbotron .lead {
+    font-family: 'Amatic SC', cursive;
+    font-size: calc(1.5rem + 2vw); /* Increase font size */
+    color: rgb(63, 153, 76);
+    width: 100%; /* Make it full width of its container */
+    max-width: none; /* Remove max-width constraint */
+    margin: 0 auto;
+}
+
+/* Adjust responsive styles */
+@media (max-width: 768px) {
+    .fullscreen-jumbotron h1 {
+        font-size: calc(2.5rem + 4vw);
+    }
+    .fullscreen-jumbotron .lead {
+        font-size: calc(1.2rem + 1.5vw);
+    }
+}
+
+        .image-container {
+            margin-top: 2rem;
+        }
+
+        .image-container img {
+            max-height: 30vh;
+            width: auto;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 576px) {
+            .fullscreen-jumbotron h1 {
+                font-size: calc(1.8rem + 3vw);
+            }
+
+            .fullscreen-jumbotron .lead {
+                font-size: calc(1rem + 1vw);
+            }
+        }
+
+        /* Other section styles */
+        .section-title {
+            margin: 40px 0 20px;
+            font-size: 2rem;
+            color: #563d30;
+        }
+
+        /* Team member styles */
+        .team-member {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #563d30;
+            color: #dabb8c;
+            padding: 10px 0;
+        }
+
+        .footer a {
+            color: #dabb8c;
+        }
+
+        /* Additional styles for other sections */
+        .bg-light {
+            background-color: #f9eadd !important;
+        }
+
+        .py-5 {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+
+        /* Form styles */
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-control {
+            border-radius: 0.25rem;
+        }
+
+        .btn-primary {
+            background-color: #563d30;
+            border-color: #563d30;
+        }
+
+        .btn-primary:hover {
+            background-color: #42302a;
+            border-color: #42302a;
+        }
+
+        /* Card styles for testimonials */
+        .card {
+            margin-bottom: 1rem;
+        }
+
+        .blockquote-footer {
+            color: #6c757d;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <!-- <nav class="navbar navbar-expand-lg"> -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Startseite</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Über uns</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#concept">Unser Konzept</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Das Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#daily-schedule">Tagesablauf</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#registration">Anmeldung</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Elternstimmen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="jumbotron fullscreen-jumbotron">
+        <div class="container">
+            <h1 class="display-4 responsive-heading">DieSpeckMäuse</h1>
+            <p class="lead">Gemeinsam wachsen, in und mit der Natur.</p>
+        </div>
+        <div class="image-container">
+            <img src="maus.webp" alt="DieSpeckMäuse">
+        </div>
+    </div>
+
+    <!-- About Us -->
+    <section id="about" class="bg-light py-5">
+        <div class="container">
+        <h2 class="section-title">Über uns</h2>
+        <p>DieSpeckMäuse ist ein Naturkindergarten am Ortsrand von Diespeck, idyllisch gelegen am Waldrand. Hier erleben
+            Kinder die Natur jeden Tag hautnah und lernen durch spielerische Entdeckungen.</p>
+        <p>Unsere Vision ist es, Kindern einen Ort zu bieten, an dem sie sich frei entfalten können und die Natur als
+            wertvollen Lernraum kennenlernen.</p>
+        <p>Unsere Werte: Naturnähe, Nachhaltigkeit, Kreativität, Gemeinschaft</p>
+    </div>
+    </section>
+
+    <!-- Our Concept -->
+    <section id="concept" class="container">
+        <div class="container">
+            <h2 class="section-title">Unser Konzept</h2>
+            <p>Unser pädagogisches Konzept basiert auf der Naturpädagogik. Wir fördern die kindliche Neugier und
+                Kreativität durch direkte Naturerfahrungen.</p>
+            <p>Wir möchten, dass Kinder...</p>
+            <ul>
+                <li>ein tiefes Verständnis und eine Wertschätzung für die Natur entwickeln.</li>
+                <li>ihre motorischen Fähigkeiten durch Outdoor-Aktivitäten stärken.</li>
+                <li>ihre sozialen Kompetenzen in der Gemeinschaft erweitern.</li>
+            </ul>
+            <p>Durch Waldspaziergänge, kreatives Basteln mit Naturmaterialien und gemeinschaftliche Projekte erleben die
+                Kinder die Natur intensiv und lernen nachhaltig.</p>
+            <p>Warum ein Naturkindergarten? Kinder in der Natur entwickeln sich...</p>
+            <ul>
+                <li>gesünder und ausgeglichener.</li>
+                <li>kreativer und selbstständiger.</li>
+                <li>sozial kompetenter und gemeinschaftlicher.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section id="team" class="bg-light py-5">
+        <div class="container">
+        <h2 class="section-title">Das Team</h2>
+        <p>Unser engagiertes Team besteht aus erfahrenen Erzieherinnen und Erziehern, die sich leidenschaftlich für die
+            Naturpädagogik einsetzen.</p>
+        <div class="row">
+            <div class="col-md-4 team-member">
+                <img src="person.jpg" class="img-fluid" alt="Team Member">
+                <h4>Hans, Erzieher</h4>
+                <p>[Kurze Beschreibung der Qualifikationen und Interessen]</p>
+            </div>
+            <div class="col-md-4 team-member">
+                <img src="person.jpg" class="img-fluid" alt="Team Member">
+                <h4>Hans, Erzieher</h4>
+                <p>[Kurze Beschreibung der Qualifikationen und Interessen]</p>
+            </div>
+            <div class="col-md-4 team-member">
+                <img src="person.jpg" class="img-fluid" alt="Team Member">
+                <h4>Hans, Erzieher</h4>
+                <p>[Kurze Beschreibung der Qualifikationen und Interessen]</p>
+            </div>
+            <!-- Wiederhole das obige div für jedes Teammitglied -->
+        </div></div>
+    </section>
+
+    <!-- Daily Schedule -->
+    <section id="daily-schedule" >
+        <div class="container">
+            <h2 class="section-title">Tagesablauf</h2>
+            <p>Ein Tag bei DieSpeckMäuse beginnt mit einem gemeinsamen Morgenkreis, gefolgt von spannenden Aktivitäten
+                in der Natur.</p>
+            <p>Beispielhafter Ablauf:</p>
+            <ul>
+                <li>08:00 – 09:00: Ankunft und freies Spiel</li>
+                <li>09:00 – 09:30: Morgenkreis</li>
+                <li>09:30 – 11:00: Outdoor-Aktivitäten (z.B. Waldspaziergänge, Naturprojekte)</li>
+                <li>11:00 – 12:00: Mittagessen (gesund und regional)</li>
+                <li>12:00 – 14:00: Kreativzeit und freies Spiel</li>
+                <li>14:00 – 15:00: Abschlusskreis und Abholung</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Registration -->
+    <!-- <section id="registration" class="container">
+        <h2 class="section-title">Anmeldung</h2>
+        <p>Interessiert an einem Platz bei DieSpeckMäuse? Hier finden Sie alle Informationen zur Anmeldung.</p>
+        <form>
+            <div class="form-group">
+                <label for="childName">Name des Kindes</label>
+                <input type="text" class="form-control" id="childName">
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Geburtsdatum</label>
+                <input type="date" class="form-control" id="birthdate">
+            </div>
+            <div class="form-group">
+                <label for="contact">Kontaktinformationen</label>
+                <input type="text" class="form-control" id="contact">
+            </div>
+            <button type="submit" class="btn btn-primary">Anmelden</button>
+        </form>
+    </section> -->
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">Elternstimmen</h2>
+            <div class="card">
+                <div class="card-body">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"Unsere Kinder lieben DieSpeckMäuse! Sie kommen jeden Tag glücklich und
+                            ausgeglichen nach Hause."</p>
+                        <footer class="blockquote-footer">Familie Müller</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <!-- Wiederhole das obige div für jedes Testimonial -->
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container">
+        <h2 class="section-title">Kontakt</h2>
+        <p>Sie haben Fragen oder möchten uns besuchen? Kontaktieren Sie uns gerne!</p>
+        <!-- <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="subject">Betreff</label>
+                <input type="text" class="form-control" id="subject">
+            </div>
+            <div class="form-group">
+                <label for="message">Nachricht</label>
+                <textarea class="form-control" id="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Nachricht senden</button>
+        </form> -->
+        <h4>Telefon und E-Mail</h4>
+        <p>Tel: 01234 / 567890<br>E-Mail: info@diespeckmäuse.de</p>
+        
+        <h4>Adresse und Anfahrt</h4>
+        <p>DieSpeckMäuse<br>Waldrand 1, 91456 Diespeck</p>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3">
+        <p>&copy; 2024 DieSpeckMäuse - Alle Rechte vorbehalten</p>
+        <a href="#" class="text-white">Facebook</a> |
+        <a href="#" class="text-white">Instagram</a> |
+        <a href="impressum.html" class="text-white">Impressum</a>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.navbar-nav>li>a').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+            });
+        });
+        </script>
+
+</body>
+
+</html>
