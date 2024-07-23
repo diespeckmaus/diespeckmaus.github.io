@@ -1,37 +1,74 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DieSepeckMäuse</title>
+    <title>DIESPECKMÄUSE</title>
     <style>
-        body, html {
+              
+       body,
+        html {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
             background-color: rgb(218, 187, 140);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .infobox {
+            font-family: 'Quicksand', sans-serif;
+            color: #563d30;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .teaser,
+        .email {
+            margin: 0;
+            padding: 0;
+        }
+
+        .email a {
+            color: #563d30;
+            text-decoration: underline;
         }
 
         .image-container {
             width: 100%;
             display: flex;
             justify-content: center;
+            position: absolute;
+            bottom: 0;
         }
 
         .image-container img {
-            max-height: 25vh; /* Bildhöhe entspricht einem Viertel der Bildschirmhöhe */
+            max-height: 50vh;
             height: auto;
             width: auto;
         }
     </style>
 </head>
+
 <body>
+    <div class="infobox">
+        <p class="teaser">bald geht's los...</p>
+        <p class="email"><a href="mailto:hallo@diepseckmäuse.de">hallo@diepseckmäuse.de</a></p>
+    </div>
     <div class="image-container">
-        <img src="maus.webp" alt="DieSpeckMäuse">
+        <img src="teaser.png" alt="DieSpeckMäuse">
     </div>
 </body>
+
 </html>
