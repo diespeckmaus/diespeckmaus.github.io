@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIESPECKMÄUSE - Kinder Großtagespflege</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(218, 187, 140);
+            font-family: 'Quicksand', sans-serif;
+            color: #563d30;
+            padding-top: 56px;
+        }
+
+        .navbar {
+            background-color: #563d30;
+            margin-bottom: 0;
+        }
+
+        .navbar-brand {
+            color: #dabb8c !important;
+            font-family: 'Amatic SC', cursive;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: #dabb8c !important;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .navbar-toggler {
+            border-color: rgba(243, 225, 213, 0.5);
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, .25);
+        }
+
+        .jumbotron {
+            background-color: #dabb8c;
+        }
+
+
+        .fullscreen-jumbotron {
+            height: calc(100vh - 56px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0;
+        }
+
+        .image-container {
+            text-align: center;
+            display: inline-block;
+        }
+
+        .image-container img {
+            max-height: 40vh;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .subtitle-container {
+            text-align: center;
+            display: block;
+            width: auto;
+            margin: 0 auto;
+        }
+
+
+        .subtitle {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2rem;
+            color: rgb(55, 33, 15);
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+
+        @media (max-width: 768px) {
+            .image-container img {
+                max-height: 30vh;
+            }
+
+            .subtitle {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="#">DIESPECKMÄUSE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Startseite</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Über uns</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#concept">Unser Konzept</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Das Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mitmachen">Mitmachen!</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Elternstimmen</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron fullscreen-jumbotron">
+        <div class="image-container">
+            <img src="maus.png" alt="DieSpeckMäuse">
+            <div class="subtitle-container">
+                <p class="subtitle">Gemeinsam wachsen, in und mit der Natur.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">Über uns</h2>
+            <p>DIESPECKMÄUSE ist eine Natur-Kindergroßtagespflege, die im Herbst 2024 ihre Tore öffnen wird. Idyllisch
+                am Waldrand am Ortsrand von Diespeck gelegen, werden hier Kinder im Alter von 2-7 Jahren die Natur jeden
+                Tag hautnah erleben und durch spielerische Entdeckungen lernen dürfen.</p>
+            <p>Unsere Vision ist es, Kindern einen Ort zu bieten, an dem sie sich frei entfalten können und die Natur
+                als wertvollen Lernraum kennenlernen. Bei den DIESPECKMÄUSEN legen wir großen Wert darauf, dass die
+                Kinder in einer sicheren und liebevollen Umgebung aufwachsen, in der ihre Neugierde und ihr
+                Entdeckerdrang gefördert werden.</p>
+        </div>
+    </section>
+
+    <section id="concept" class="container py-5">
+        <h2 class="section-title">Unser Konzept</h2>
+        <p>Unser pädagogisches Konzept basiert auf der Naturpädagogik. Wir fördern die kindliche Neugier und Kreativität
+            durch direkte Naturerfahrungen.</p>
+        <p>Wir möchten, dass Kinder...</p>
+        <ul>
+            <li>ein tiefes Verständnis und eine Wertschätzung für die Natur entwickeln.</li>
+            <li>ihre motorischen Fähigkeiten durch Outdoor-Aktivitäten stärken.</li>
+            <li>ihre sozialen Kompetenzen in der Gemeinschaft erweitern.</li>
+        </ul>
+        <p>Durch Waldspaziergänge, kreatives Basteln mit Naturmaterialien und gemeinschaftliche Projekte erleben die
+            Kinder die Natur intensiv und lernen nachhaltig.</p>
+        <p>Warum eine Kinder Großtagespglge in der Natur? Kinder in der Natur entwickeln sich...</p>
+        <ul>
+            <li>gesünder und ausgeglichener.</li>
+            <li>kreativer und selbstständiger.</li>
+            <li>sozial kompetenter und gemeinschaftlicher.</li>
+        </ul>
+    </section>
+
+    <section id="team" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">Das Team</h2>
+            <p>Wir sind Susan, Diana und Magdalena, pädagogische Fachkräfte, mit einer gemeinsamen Leidenschaft: der
+                Arbeit
+                mit Kindern in der Natur. Unsere Überzeugung ist, dass das Draußensein und das Erkunden der natürlichen
+                Umgebung nicht nur Spaß macht, sondern auch eine essentielle Rolle in der Entwicklung der Kinder spielt.
+                Mit
+                Erfahrungen in der Waldpädagogik bringen wir vielfältige Kenntnisse und kreative Ideen in unsere Arbeit
+                ein.
+                Wir glauben daran, dass die Natur ein hervorragender Lernort ist, der es den Kindern ermöglicht,
+                spielerisch
+                zu entdecken, ihre Neugierde zu entfalten, wichtige soziale Fähigkeiten zu entwickeln und dabei behutsam
+                in
+                ihrem Tempo wachsen zu können.</p>
+            <p>Wir freuen uns auf eine vertrauensvolle Zusammenarbeit, in der wir Ihre Kinder auf spannende Abenteuer im
+                Wald und auf der Wiesen mitnehmen und ihnen die Wunder der Natur näherbringen. Unser Ziel ist es, eine
+                liebevolle und familiäre Atmosphäre zu schaffen, in der sich jedes Kind wohl und geborgen fühlt!</p>
+            <p>Unterstützt werden wir von Christian, Mitgründer der DIESPECKMÄUSE und erfahrener Waldpapa. Er
+                unterstützt
+                unser Team ehrenamtlich bei der Planung, Organisation und übernimmt handwerkliche Aufgaben. Christian
+                bringt
+                viele Jahre Erfahrung als Waldwart in einem Waldkindergarten mit. </p>
+
+            <div class="row">
+                <div class="col-md-4 team-member">
+                    <img src="susan.jpg" class="img-fluid" alt="Susan Lantenhammer">
+                    <h4>Susan Lantenhammer</h4>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="diana.jpg" class="img-fluid" alt="Diana Fornataro">
+                    <h4>Diana Fornataro</h4>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="magdalena.jpg" class="img-fluid" alt="Magdalena Pfundt">
+                    <h4>Magdalena Pfundt</h4>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="christian.jpg" class="img-fluid" alt="Christian Kugler">
+                    <h4>Christian Kugler</h4>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="mitmachen" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Mitmachen!</h2>
+            <p>Wir suchen engagierte Helfer, die uns ehrenamtlich beim Aufbau unserer Einrichtung unterstützen möchten.
+                Wenn Sie Interesse daran haben, Teil unseres Projekts zu werden und die Entwicklung der DIESPECKMÄUSE
+                aktiv mitzugestalten, freuen wir uns über Ihre Kontaktaufnahme. Jede helfende Hand ist herzlich
+                willkommen, sei es bei handwerklichen Tätigkeiten, organisatorischen Aufgaben oder der Gründung eines
+                Fördervereins!</p>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">Kontakt</h2>
+            <p>Wir freuen uns darauf, Ihr Kind bei uns willkommen zu heißen und stehen Ihnen für Fragen und weitere
+                Informationen gerne zur Verfügung. </p>
+            <h4>Telefon und E-Mail</h4>
+            <p>Tel: 0160/96862080 (Susan)<br>E-Mail: hallo@diespeckmaeuse.de</p>
+            <!-- <h4>Adresse und Anfahrt</h4>
+            <p>91456 Diespeck</p> -->
+        </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="footer text-center py-3">
+        <p>&copy; 2024 DIESPECKMÄUSE - Alle Rechte vorbehalten</p>
+        <a href="#" class="text-white">Facebook</a> |
+        <a href="#" class="text-white">Instagram</a> |
+        <a href="impressum.html" class="text-white">Impressum</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.navbar-nav>li>a').on('click', function () {
+                $('.navbar-collapse').collapse('hide');
+            });
+        });
+    </script>
+</body>
+
+</html>
