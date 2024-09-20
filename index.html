@@ -38,6 +38,14 @@
             color: #dabb8c !important;
         }
 
+        .nav-icon {
+            width: 24px;
+
+            height: 24px;
+            vertical-align: middle;
+
+        }
+
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
@@ -54,7 +62,6 @@
         .jumbotron {
             background-color: #dabb8c;
         }
-
 
         .fullscreen-jumbotron {
             height: calc(100vh - 56px);
@@ -95,6 +102,20 @@
         }
 
 
+        #contact img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        #contact {
+
+            padding: 1rem 0;
+            /* Adjust padding as needed */
+        }
+
         @media (max-width: 768px) {
             .image-container img {
                 max-height: 30vh;
@@ -102,6 +123,11 @@
 
             .subtitle {
                 font-size: 1.5rem;
+            }
+
+            .nav-icon {
+                width: 20px;
+                height: 20px;
             }
         }
     </style>
@@ -137,6 +163,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Kontakt</a>
                 </li>
+                <li class="nav-item">
+                    <!-- Instagram icon -->
+                    <a class="nav-link" href="https://www.instagram.com/diespeckmaeuse/" target="_blank">
+                        <img src="./img/instagram2.svg" alt="Instagram" class="nav-icon">
+                    </a>
+                </li>
+
             </ul>
         </div>
     </nav>
@@ -252,21 +285,29 @@
             <h4>Telefon und E-Mail</h4>
             <p>Tel: 0160/96862080 (Susan)<br>E-Mail: <a
                     href="mailto:hallo@diespeckmaeuse.de">hallo@diespeckmaeuse.de</a></p>
-            <!-- <h4>Adresse und Anfahrt</h4>
-            <p>91456 Diespeck</p> -->
+            <h4>Adresse und Anfahrt</h4>
+            <p>Google Maps Link zur Anfahrt: <a
+                    href="https://maps.app.goo.gl/7cf7PBaQETwQcg9C6">https://maps.app.goo.gl/7cf7PBaQETwQcg9C6</a> Bitte
+                vor der Schranke parken und über den Sportplatz laufen!</p>
+            <img src="./img/anfahrt.jpg">
         </div>
         </div>
     </section>
 
 
-
-
     <footer class="footer text-center py-3">
         <p>&copy; 2024 DIESPECKMÄUSE - Alle Rechte vorbehalten</p>
-        <a href="https://www.facebook.com/profile.php?id=61563484612452" class="text-white">Facebook</a> |
-        <a href="https://www.instagram.com/diespeckmaeuse/" class="text-white">Instagram</a> |
+        <a href="https://www.facebook.com/profile.php?id=61563484612452"
+            class="text-white d-inline-flex align-items-center">
+            <img src="./img/facebook.svg" alt="Facebook" class="me-2" style="width: 20px; height: 20px;"> Facebook
+        </a> |
+        <a href="https://www.instagram.com/diespeckmaeuse/" class="text-white d-inline-flex align-items-center">
+            <img src="./img/instagram.svg" alt="Insta" class="me-2" style="width: 20px; height: 20px;"> Instagram
+        </a> |
+
         <a href="impressum.html" class="text-white">Impressum</a>
     </footer>
+
 
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
