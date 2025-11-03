@@ -92,6 +92,29 @@
             align-items: center;
             gap: 14px;
             padding: 28px clamp(16px, 4vw, 40px);
+           
+        }
+        header a {
+            color: #24322a;
+            /* dunkles, waldiges Grün‑Braun */
+            font-size: 13px; /* wie im Footer */
+            text-decoration: none;
+        }
+        header a:visited {
+            color: #24322a;
+        }
+        header a:hover, header a:focus {
+            text-decoration: underline;
+        }
+
+        header a::before {
+            content: "←";
+            display: inline-block;
+            margin-right: 6px;
+            line-height: 1;
+            font-size: 16px; /* leicht größer für visuelle Balance */
+            color: #2e6b3f; /* Waldgrün – harmoniert mit dem Markenstil */
+            vertical-align: middle;
         }
 
         .brandmark {
