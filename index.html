@@ -132,19 +132,32 @@
 
         }
 
+        /* Gallery: show 2 images per row on mobile, keep desktop unchanged */
+        @media (max-width: 767.98px) {
+            #gallery > .col-md-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        /* Team: show 2 images per row on mobile, keep desktop unchanged */
+        @media (max-width: 767.98px) {
+            #team .row > .col-md-4.team-member {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
         /* Team section: consistent image sizing */
         .team-member {
             text-align: center;
             margin-bottom: 1.5rem;
         }
 
-        /* Mobile / stacked layout: smaller, centered */
+        /* Mobile: images fill their column */
         .team-member img {
-            width: 50%;
-            max-width: 320px;
+            width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto;
             object-fit: cover;
             border-radius: 10px;
         }
