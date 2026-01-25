@@ -18,7 +18,8 @@
     <!-- Add meta descriptions -->
     <meta name="description"
         content="DIESPECKMÄUSE - Natur-Kindergroßtagespflege in Diespeck. Naturpädagogik für Kinder von 2-7 Jahren.">
-    <meta name="keywords" content="Kindergroßtagespflege, Naturpädagogik, Diespeck, Kinderbetreuung, Kindergarten, Waldkindergarten">
+    <meta name="keywords"
+        content="Kindergroßtagespflege, Naturpädagogik, Diespeck, Kinderbetreuung, Kindergarten, Waldkindergarten">
     <!-- Add social media meta tags -->
     <meta property="og:title" content="DIESPECKMÄUSE Natur-Kindergroßtagespflege">
     <meta property="og:description" content="Naturnahe Kinderbetreuung in Diespeck">
@@ -129,6 +130,45 @@
         .gallery-img {
             border-radius: 10px;
 
+        }
+
+        /* Gallery: show 2 images per row on mobile, keep desktop unchanged */
+        @media (max-width: 767.98px) {
+            #gallery > .col-md-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        /* Team: show 2 images per row on mobile, keep desktop unchanged */
+        @media (max-width: 767.98px) {
+            #team .row > .col-md-4.team-member {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Team section: consistent image sizing */
+        .team-member {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Mobile: images fill their column */
+        .team-member img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Desktop / side-by-side layout: full width, equal height */
+        @media (min-width: 768px) {
+            .team-member img {
+                width: 100%;
+                max-width: none;
+                height: 280px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -331,6 +371,7 @@
             .popup-subtitle {
                 font-size: 14px;
             }
+        }
     </style>
 </head>
 
@@ -465,7 +506,7 @@
         </div>
         <!-- Galerie-Bilder -->
         <div class="container my-5">
-          <div class="row" id="gallery"></div>
+            <div class="row" id="gallery"></div>
         </div>
     </section>
 
@@ -494,13 +535,23 @@
 
     <section id="team" class="bg-light py-5">
         <div class="container">
-            <h2 class="section-title">Das Team</h2>
-            <p>Wir sind Susan und Diana, pädagogische Fachkräfte, mit einer gemeinsamen Leidenschaft: der
-                Arbeit
-                mit Kindern in der Natur. Unsere Überzeugung ist, dass das Draußensein und das Erkunden der natürlichen
+<h2 class="section-title">Das Team</h2>
+            <div class="row">
+                <div class="col-md-4 team-member">
+                    <img src="img/susan.jpg" class="img-fluid" alt="Susan Lantenhammer">
+                    <h4>Susan Lantenhammer</h4>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="img/magdalena.jpg" class="img-fluid" alt="Magdalena Pundt">
+                    <h4>Magdalena Pfundt</h4>
+                </div>
+                
+            </div>
+            
+            <p><b>Wir sind Susan (Mitgründerin der DIESPECKMÄUSE) und Magdalena, beide erfahrene pädagogische Fachkräfte, mit einer gemeinsamen Leidenschaft: der
+                Arbeit mit Kindern in der Natur.</b> Unsere Überzeugung ist, dass das Draußensein und das Erkunden der natürlichen
                 Umgebung nicht nur Spaß macht, sondern auch eine essentielle Rolle in der Entwicklung der Kinder spielt.
-                Mit
-                Erfahrungen in der Waldpädagogik bringen wir vielfältige Kenntnisse und kreative Ideen in unsere Arbeit
+                Mit jahrelangen Erfahrungen in der Waldpädagogik bringen wir vielfältige Kenntnisse und kreative Ideen in unsere Arbeit
                 ein.
                 Wir glauben daran, dass die Natur ein hervorragender Lernort ist, der es den Kindern ermöglicht,
                 spielerisch
@@ -510,17 +561,12 @@
             <p>Wir freuen uns auf eine vertrauensvolle Zusammenarbeit, in der wir Ihre Kinder auf spannende Abenteuer im
                 Wald und auf der Wiese mitnehmen und ihnen die Wunder der Natur näherbringen. Unser Ziel ist es, eine
                 liebevolle und familiäre Atmosphäre zu schaffen, in der sich jedes Kind wohl und geborgen fühlt!</p>
-            <p>Unterstützt werden wir von Christian, Mitgründer der DIESPECKMÄUSE und erfahrener Waldpapa. Er
-                unterstützt
-                unser Team ehrenamtlich bei der Planung, Organisation und übernimmt handwerkliche Aufgaben. Christian
-                bringt
-                viele Jahre Erfahrung als Waldwart in einem Waldkindergarten mit. </p>
+            <p><b>Unterstützt werden wir von Diana und Christian, den Mitgründern der DIESPECKMÄUSE.</b> 
+                Diana hat in den Jahren 2024/25 maßgeblich dazu beigetragen, die DIESPECKMÄUSE aufzubauen und zu prägen – sowohl konzeptionell als auch ganz praktisch im pädagogischen Alltag als Erzieherin.
+                Inzwischen unterstützt sie die DIESPECKMÄUSE ehrenamtlich im Hintergrund. Christian begleitet die Einrichtung ebenfalls ehrenamtlich, berät das Team verlässlich in konzeptionellen sowie IT Fragen und übernimmt darüber hinaus handwerkliche Aufgaben.</p>
 
             <div class="row">
-                <div class="col-md-4 team-member">
-                    <img src="img/susan.jpg" class="img-fluid" alt="Susan Lantenhammer">
-                    <h4>Susan Lantenhammer</h4>
-                </div>
+           
                 <div class="col-md-4 team-member">
                     <img src="img/diana.jpg" class="img-fluid" alt="Diana Fornataro">
                     <h4>Diana Fornataro</h4>
@@ -541,7 +587,7 @@
         <div class="container">
             <h2 class="section-title">Presse</h2>
             <p><span> Fränkische Landeszeitung, 12.09.2025:</span><br>
-                <div class="pdf-viewer-container"
+            <div class="pdf-viewer-container"
                 style="display: flex; justify-content: flex-start; align-items: flex-start;">
                 <iframe
                     src="https://diespeckmäuse.de/js/pdfjs/web/viewer.html?file=https://diespeckmäuse.de/pdf/FLZ_12092025.pdf#zoom=page-fit"
@@ -549,7 +595,7 @@
             </div>
             </p>
             <p><span> Fränkische Landeszeitung, 28.07.2025:</span><br>
-                <div class="pdf-viewer-container"
+            <div class="pdf-viewer-container"
                 style="display: flex; justify-content: flex-start; align-items: flex-start;">
                 <iframe
                     src="https://diespeckmäuse.de/js/pdfjs/web/viewer.html?file=https://diespeckmäuse.de/pdf/FLZ_28072025.pdf#zoom=page-fit"
@@ -600,7 +646,8 @@
             <p>Wir freuen uns darauf, Ihr Kind bei uns willkommen zu heißen und stehen Ihnen für Fragen und weitere
                 Informationen gerne zur Verfügung. </p>
             <h4>Telefon und E-Mail</h4>
-            <p>Ruf doch mal an: <a href="tel:+4991616209704" aria-label="Ruf doch mal an: 09161 / 62 09 70 4">09161 / 62 09 70 4
+            <p>Ruf doch mal an: <a href="tel:+4991616209704" aria-label="Ruf doch mal an: 09161 / 62 09 70 4">09161 / 62
+                    09 70 4
                 </a>
                 <br>oder schreib eine E-Mail an: <a href="mailto:hallo@diespeckmaeuse.de">hallo@diespeckmaeuse.de</a>
             </p>
@@ -608,7 +655,7 @@
             <p>Am alten Sportplatz 1<br>
                 91456 Diespeck</p>
             <p>Google Maps Link zur Anfahrt:
-                <a href="https://maps.app.goo.gl/7cf7PBaQETwQcg9C6">https://maps.app.goo.gl/7cf7PBaQETwQcg9C6</a>
+                <a href="https://maps.app.goo.gl/uogSpTtFyHNWXGjr5">https://maps.app.goo.gl/uogSpTtFyHNWXGjr5</a>
                 Bitte vor der Schranke parken und über den Sportplatz laufen!
             </p>
             <img src="./img/anfahrt.jpg" alt="Anfahrt">
@@ -616,7 +663,7 @@
     </section>
 
     <footer class="footer text-center py-3">
-        <p>&copy; 2024 DIESPECKMÄUSE - Alle Rechte vorbehalten</p>
+        <p>&copy; 2026 DIESPECKMÄUSE - Alle Rechte vorbehalten - Wir nutzen kein Tracking und keine Cookies.</p>
         <a href="https://www.facebook.com/people/Diespeckm%C3%A4use-Kindergro%C3%9Ftagespflege/pfbid02TuZHGP3pghDFQGwBsUXzPdEz6Ddo2QjyywgdADhYXcaoTbPzGiEnVBi4qzZd8RVJl/"
             class="text-white d-inline-flex align-items-center">
             <img src="./img/facebook.svg" alt="Facebook" class="me-2" style="width: 20px; height: 20px;"> Facebook
@@ -692,65 +739,65 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
 
-    // Fisher–Yates Shuffle-Funktion
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    }
+        // Fisher–Yates Shuffle-Funktion
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
 
-    // Dynamisches Laden der Galerie aus gallery.json und Initialisierung des Modal-Karussells
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('gallery.json')
-        .then(response => response.json())
-        .then(allImages => {
-          shuffle(allImages);
-          const selected = allImages.slice(0, 9);
-          const gallery = document.getElementById('gallery');
-          selected.forEach((src, index) => {
-            const col = document.createElement('div');
-            col.className = 'col-md-4 mb-4';
-            const img = document.createElement('img');
-            img.src = src;
-            img.className = 'img-fluid gallery-img';
-            img.setAttribute('data-index', index);
-            img.setAttribute('alt', '');
-            img.setAttribute('loading', 'lazy');
-            col.appendChild(img);
-            gallery.appendChild(col);
-          });
+        // Dynamisches Laden der Galerie aus gallery.json und Initialisierung des Modal-Karussells
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('gallery.json')
+                .then(response => response.json())
+                .then(allImages => {
+                    shuffle(allImages);
+                    const selected = allImages.slice(0, 9);
+                    const gallery = document.getElementById('gallery');
+                    selected.forEach((src, index) => {
+                        const col = document.createElement('div');
+                        col.className = 'col-md-4 mb-4';
+                        const img = document.createElement('img');
+                        img.src = src;
+                        img.className = 'img-fluid gallery-img';
+                        img.setAttribute('data-index', index);
+                        img.setAttribute('alt', '');
+                        img.setAttribute('loading', 'lazy');
+                        col.appendChild(img);
+                        gallery.appendChild(col);
+                    });
 
-          // Build carousel indicators and slides dynamically
-          const indicators = document.querySelector('#galleryCarousel .carousel-indicators');
-          const inner = document.querySelector('#galleryCarousel .carousel-inner');
-          selected.forEach((src, i) => {
-            // Indicator
-            const li = document.createElement('li');
-            li.setAttribute('data-target', '#galleryCarousel');
-            li.setAttribute('data-slide-to', i);
-            if (i === 0) li.classList.add('active');
-            indicators.appendChild(li);
-            // Slide
-            const slide = document.createElement('div');
-            slide.className = 'carousel-item' + (i === 0 ? ' active' : '');
-            slide.innerHTML = `<img class="d-block w-100" src="${src}" alt="" loading="lazy">`;
-            inner.appendChild(slide);
-          });
+                    // Build carousel indicators and slides dynamically
+                    const indicators = document.querySelector('#galleryCarousel .carousel-indicators');
+                    const inner = document.querySelector('#galleryCarousel .carousel-inner');
+                    selected.forEach((src, i) => {
+                        // Indicator
+                        const li = document.createElement('li');
+                        li.setAttribute('data-target', '#galleryCarousel');
+                        li.setAttribute('data-slide-to', i);
+                        if (i === 0) li.classList.add('active');
+                        indicators.appendChild(li);
+                        // Slide
+                        const slide = document.createElement('div');
+                        slide.className = 'carousel-item' + (i === 0 ? ' active' : '');
+                        slide.innerHTML = `<img class="d-block w-100" src="${src}" alt="" loading="lazy">`;
+                        inner.appendChild(slide);
+                    });
 
-          // Klick-Handler für Modal-Karussell
-          document.querySelectorAll('.gallery-img').forEach(imgEl => {
-            imgEl.addEventListener('click', function() {
-              const idx = parseInt(this.getAttribute('data-index'), 10);
-              $('#galleryModal').modal('show');
-              $('#galleryCarousel').carousel(idx);
-            });
-          });
-        })
-        .catch(error => console.error('Fehler beim Laden der Galerie:', error));
-    });
+                    // Klick-Handler für Modal-Karussell
+                    document.querySelectorAll('.gallery-img').forEach(imgEl => {
+                        imgEl.addEventListener('click', function () {
+                            const idx = parseInt(this.getAttribute('data-index'), 10);
+                            $('#galleryModal').modal('show');
+                            $('#galleryCarousel').carousel(idx);
+                        });
+                    });
+                })
+                .catch(error => console.error('Fehler beim Laden der Galerie:', error));
+        });
     </script>
-    
+
 
 
     <!-- Insta pop up -->
